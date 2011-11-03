@@ -1,3 +1,9 @@
+# revision 23373
+# category Package
+# catalog-ctan /macros/latex/contrib/dashundergaps
+# catalog-date 2010-01-23 00:15:17 +0100
+# catalog-license lppl
+# catalog-version 1.2
 Name:		texlive-dashundergaps
 Version:	1.2
 Release:	1
@@ -46,6 +52,7 @@ a 'fill-in block' for student evaluation sheets.
 %doc %{_texmfdistdir}/doc/latex/dashundergaps/doc/tex/dashundergaps.forlisting
 %doc %{_texmfdistdir}/doc/latex/dashundergaps/doc/tex/dashundergaps.tex
 %doc %{_texmfdistdir}/doc/latex/dashundergaps/doc/tex/perso.ist
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,3 +63,5 @@ a 'fill-in block' for student evaluation sheets.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
