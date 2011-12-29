@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The package provides commands (\underline, \dotuline and
@@ -27,20 +25,12 @@ the styles the package is capable of. A phantom mode is
 provided, where the underline (of whatever form) can serve for
 a 'fill-in block' for student evaluation sheets.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -53,7 +43,6 @@ a 'fill-in block' for student evaluation sheets.
 %doc %{_texmfdistdir}/doc/latex/dashundergaps/doc/tex/dashundergaps.forlisting
 %doc %{_texmfdistdir}/doc/latex/dashundergaps/doc/tex/dashundergaps.tex
 %doc %{_texmfdistdir}/doc/latex/dashundergaps/doc/tex/perso.ist
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -64,5 +53,3 @@ a 'fill-in block' for student evaluation sheets.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
