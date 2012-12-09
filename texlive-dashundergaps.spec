@@ -53,3 +53,17 @@ a 'fill-in block' for student evaluation sheets.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.2-2
++ Revision: 750766
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.2-1
++ Revision: 718202
+- texlive-dashundergaps
+- texlive-dashundergaps
+- texlive-dashundergaps
+- texlive-dashundergaps
+
