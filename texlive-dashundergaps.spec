@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version 1.2
 Name:		texlive-dashundergaps
-Version:	1.2
-Release:	10
+Version:	2.0a
+Release:	1
 Summary:	Underline with dotted or dashed lines
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dashundergaps
