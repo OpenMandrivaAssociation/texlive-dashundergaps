@@ -1,6 +1,6 @@
 Name:		texlive-dashundergaps
 Version:	58150
-Release:	1
+Release:	2
 Summary:	Underline with dotted or dashed lines
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dashundergaps
