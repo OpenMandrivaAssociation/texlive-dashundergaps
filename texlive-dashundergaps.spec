@@ -3,7 +3,7 @@ Version:	58150
 Release:	2
 Summary:	Underline with dotted or dashed lines
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/dashundergaps
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/dashundergaps
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dashundergaps.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dashundergaps.doc.r%{version}.tar.xz
